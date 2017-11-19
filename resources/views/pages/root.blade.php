@@ -2,5 +2,9 @@
 @section('title', '首页')
 
 @section('content')
-  <h1>这里是首页</h1>
+	@auth
+		<h1>这里是首页，已经登录</h1>
+	@else
+		<h1>这里是首页，请先登录</h1>
+	@endauth
 @stop
