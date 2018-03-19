@@ -36,4 +36,5 @@ class TopicRequest extends Request
             'body.min' => '文章内容必须至少三个字符',
         ];
     }
+
 }
