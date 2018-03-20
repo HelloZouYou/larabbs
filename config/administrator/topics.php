@@ -16,7 +16,7 @@ return [
             'title'    => '话题',
             'sortable' => false,
             'output'   => function ($value, $model) {
-                return '<div style="max-width:260px">' . model_link($value, $model) . '</div>';
+                return '<div>' . model_link($value, $model) . '</div>';
             },
         ],
         'user' => [
@@ -24,7 +24,7 @@ return [
             'sortable' => false,
             'output'   => function ($value, $model) {
                 $avatar = $model->user->avatar;
-                $value = empty($avatar) ? 'N/A' : '<img src="'.$avatar.'" style="height:22px;width:22px"> ' . $model->user->name;
+                $value = empty($avatar) ? 'N/A' : '<img src="'.$avatar.'" style="max-height:22px;max-width:22px"> ' . $model->user->name;
                 return model_link($value, $model);
             },
         ],
